@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
 import Repo from './Repo.jsx';
 class RepoList extends Component {
 	render () {

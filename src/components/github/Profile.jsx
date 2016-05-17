@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
 import RepoList from './RepoList.jsx';
 class Profile extends Component {
 	render () {
