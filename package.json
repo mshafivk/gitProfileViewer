@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack -d --progress --colors --watch",
-    "dist": "webpack -p",
-    "postinstall": "npm run dist"
+    "dist": "webpack -p"
   },
   "author": "Muhammed Shafi Vayyattukavil",
   "license": "MIT",
