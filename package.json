@@ -4,7 +4,9 @@
   "description": "Git Profile Viewer",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack -d --progress --colors --watch",
+    "dist": "webpack -p",
+    "postinstall": "npm run dist"
   },
   "author": "Muhammed Shafi Vayyattukavil",
   "license": "MIT",
