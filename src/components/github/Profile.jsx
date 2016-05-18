@@ -37,6 +37,8 @@ class Profile extends Component {
   					   			</ul>
   					   		</div>
   					   </div>
+  					   <hr/>
+  					   <a href={this.props.userData.html_url} target='_blank' className='btn btn-primary'>Visit</a>
   					</div>
   				  </div>
   				  <hr/>

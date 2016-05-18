@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import Profile from './github/Profile.jsx';
+import Search from './github/Search.jsx';
+
 class App extends Component {
 	constructor (props) {
 		super(props);
@@ -18,7 +20,6 @@ class App extends Component {
         	cache: false,
         	success: function (data) {
         		this.setState({userData: data});
-                console.log(data);
         	}.bind(this),
 			error: function (xhr, status, error) {
 				this.setState({userName: null});
@@ -40,7 +41,14 @@ class App extends Component {
 			}.bind (this)
         });
 	}
-	
+
+	handleFormSubmit (userName) {
+		this.setState({userName: userName}, function () {
+		    this.getUserData();
+		    this.getUserRepos();
+		}.bind(this));
+	}
+
 	componentDidMount() {
 		this.getUserData();
 		this.getUserRepos();
@@ -48,6 +56,8 @@ class App extends Component {
 	render () {
 		return (
 			<div>
+			<Search onFormSubmit={this.handleFormSubmit.bind(this)}/>
+			<hr/>
               <Profile {...this.state}/>
 			</div>);
 	}
