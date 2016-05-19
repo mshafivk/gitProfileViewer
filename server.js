@@ -15,7 +15,7 @@ if(process.env.NODE_ENV !== 'production') {
   app.use(webpackHotMiddleware(compiler));
 }
 
-app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static(path.join(__dirname, 'app')));
 
 app.get('/', function(request, response) {
   response.sendFile(__dirname + '/app/index.html')
